@@ -34,15 +34,42 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".csv"
+							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "ds_csv_semicolon",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ctadftrainingazure",
+							"folder": "dpt_sport",
+							"fileName": "00_cliente_20240428232415.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_csv_semicolon",
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ctadftrainingazure",
+							"folder": "dpt_sport",
+							"fileName": {
+								"value": "@concat('teste','_',formatDateTime(pipeline().TriggerTime, 'dd-MM-yyyy HH:mm:ss'),'.csv')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
