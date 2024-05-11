@@ -37,29 +37,12 @@
 							"fileExtension": ".csv"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_csv_dept_sport",
+						"referenceName": "ds_csv_semicolon",
 						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "ds_csv_landing_zone",
-						"type": "DatasetReference",
-						"parameters": {
-							"FileName": "client"
-						}
 					}
 				]
 			}
