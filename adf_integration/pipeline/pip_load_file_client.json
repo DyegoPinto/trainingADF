@@ -52,9 +52,18 @@
 						"referenceName": "ds_csv_semicolon",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "ctadftrainingazure",
-							"folder": "dpt_sport",
-							"fileName": "00_cliente_20240428232415.csv"
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"folder": {
+								"value": "@pipeline().parameters.SourceFolder",
+								"type": "Expression"
+							},
+							"fileName": {
+								"value": "@pipeline().parameters.SourceFileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -63,8 +72,14 @@
 						"referenceName": "ds_csv_semicolon",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "ctadftrainingazure",
-							"folder": "dpt_sport",
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"folder": {
+								"value": "@pipeline().parameters.DestinationFolder",
+								"type": "Expression"
+							},
 							"fileName": {
 								"value": "@concat('teste','_',formatDateTime(pipeline().TriggerTime, 'dd-MM-yyyy HH:mm:ss'),'.csv')",
 								"type": "Expression"
@@ -74,6 +89,29 @@
 				]
 			}
 		],
+		"parameters": {
+			"container": {
+				"type": "String",
+				"defaultValue": "ctadftrainingazure"
+			},
+			"SourceFolder": {
+				"type": "String",
+				"defaultValue": "dpt_sport"
+			},
+			"SourceFileName": {
+				"type": "String",
+				"defaultValue": "00_cliente_20240428232415.csv"
+			},
+			"DestinationFolder": {
+				"type": "String",
+				"defaultValue": "analytics/landing_zone"
+			}
+		},
+		"variables": {
+			"container": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2024-05-11T14:01:51Z"
 	},
