@@ -107,11 +107,6 @@
 				"defaultValue": "analytics/landing_zone"
 			}
 		},
-		"variables": {
-			"container": {
-				"type": "String"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2024-05-11T14:01:51Z"
 	},
