@@ -1,0 +1,31 @@
+{
+	"name": "ds_csv_dept_sport",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datalake_dept_sport",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "00_cliente_20240428232415.csv",
+				"folderPath": "dpt_sport",
+				"fileSystem": "ctadftrainingazure"
+			},
+			"columnDelimiter": ";",
+			"encodingName": "WINDOWS-1252",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CODIGO_CLIENTE;NOME_CLIENTE;DATA_NASCIMENTO;IDADE_CLIENTE;DESCRICAO_ENDERECO;NUMERO_ENDERECO;NOME_CIDADE;NUMERO_TELEFONE;EMAIL_CLIENTE;OCUPACAO_CLIENTE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

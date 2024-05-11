@@ -1,0 +1,9 @@
+{
+	"name": "adf-adf-training-azure",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ce5a5a48-f7bc-427d-a2bc-470569d0be9d",
+		"tenantId": "17e162f4-4a54-45ae-aae8-81d4303633b7"
+	}
+}
