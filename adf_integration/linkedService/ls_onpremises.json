@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "\\\\BELMONTPC\\Users\\dyego\\PythonProject\\PythonStudy\\PythonStudy\\Sample\\TSE",
+			"host": "\\\\BELMONTPC\\Users\\dyego\\PythonProject\\PythonStudy\\PythonStudy\\Sample",
 			"userId": "BELMONTPC\\trainingAzure",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4M2NjYjFhZS1iMjZmLTRjYTAtOWQ1MC1hYmI4NTkxNDU0MWMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2ZTc1ZmI0MC01NzM0LTQxMTMtODJmMC1iMmE1ZDU1YzU4MDAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "ir-self-hosted",
