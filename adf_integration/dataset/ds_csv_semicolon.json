@@ -1,24 +1,44 @@
 {
-	"name": "ds_csv_dept_sport",
+	"name": "ds_csv_semicolon",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_datalake_dept_sport",
+			"referenceName": "ls_datalake_asaadftrainingazure",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"folder": {
+				"type": "string"
+			},
+			"fileName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "00_cliente_20240428232415.csv",
-				"folderPath": "dpt_sport",
-				"fileSystem": "ctadftrainingazure"
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().folder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().container",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ";",
 			"encodingName": "WINDOWS-1252",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"quoteChar": ""
 		},
 		"schema": [
 			{
